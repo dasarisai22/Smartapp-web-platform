@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | SmartApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+
+<body>
+
+    <div class="auth-page">
+        <div class="hero-bg"
+            style="top: 15%; left: -20%; background: var(--primary); opacity: 0.1; width: 500px; height: 500px;"></div>
+        <div class="hero-bg"
+            style="bottom: -10%; right: -15%; background: var(--accent); opacity: 0.06; width: 400px; height: 400px;">
+        </div>
+
+        <div class="container" style="display: flex; justify-content: center;">
+            <div class="auth-card glass fade-in">
+
+                <div class="form-header">
+                    <a href="index.html" class="logo"
+                        style="font-size: 2rem; margin-bottom: 0.5rem; display: inline-block;">
+                        <i class="fab fa-python"></i>Smart<span class="text-gradient">App</span>
+                    </a>
+                    <h2 style="font-size: 1.5rem; margin-top: 0.5rem;">Welcome Back</h2>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Sign in to your developer account</p>
+                </div>
+
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label class="form-label"><i class="fas fa-envelope"
+                                style="margin-right: 6px; color: var(--secondary);"></i> Email Address</label>
+                        <input type="email" class="form-control" placeholder="developer@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <div style="display: flex; justify-content: space-between;">
+                            <label class="form-label"><i class="fas fa-lock"
+                                    style="margin-right: 6px; color: var(--accent);"></i> Password</label>
+                            <a href="#" style="font-size: 0.85rem; color: var(--primary);">Forgot Password?</a>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+
+                    <div style="margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" id="remember" style="accent-color: var(--primary);">
+                        <label for="remember" style="color: var(--text-muted); font-size: 0.9rem;">Remember me</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-sign-in-alt"></i> Secure Login
+                    </button>
+                </form>
+
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="register.html">Register Now</a></p>
+                    <p style="margin-top: 1rem;"><a href="index.html"
+                            style="color: var(--text-muted); font-size: 0.9rem;"><i class="fas fa-arrow-left"></i> Back
+                            to Home</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

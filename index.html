@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartApp — Python + MySQL Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fab fa-python"></i>Smart<span class="text-gradient">App</span>
+            </a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html" class="btn btn-primary" style="color: white; padding: 0.6rem 1.4rem;"><i
+                            class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero fade-in">
+        <div class="hero-bg" style="top: -20%; right: -10%; background: var(--primary); opacity: 0.12;"></div>
+        <div class="hero-bg"
+            style="bottom: -30%; left: -5%; background: var(--secondary); opacity: 0.08; width: 500px; height: 500px;">
+        </div>
+        <div class="container hero-content">
+            <p
+                style="color: var(--primary); font-weight: 600; margin-bottom: 1rem; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem;">
+                <i class="fas fa-bolt"></i> Next-Gen Developer Platform
+            </p>
+            <h1><span class="text-gradient">Python + MySQL</span><br>Web Application</h1>
+            <p>Build powerful, scalable web applications with a secure Python backend and robust MySQL database.
+                Designed for modern developers who demand excellence.</p>
+            <div class="hero-btns">
+                <a href="register.html" class="btn btn-primary"><i class="fas fa-rocket"></i> Get Started Free</a>
+                <a href="#about" class="btn btn-outline"><i class="fas fa-play-circle"></i> Learn More</a>
+            </div>
+            <!-- Stats bar -->
+            <div
+                style="display: flex; gap: 3rem; justify-content: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+                <div style="text-align: center;">
+                    <h3 style="font-size: 2rem; margin-bottom: 0.2rem;" class="text-gradient">10K+</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Active Users</p>
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="font-size: 2rem; margin-bottom: 0.2rem;" class="text-gradient">99.9%</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Uptime</p>
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="font-size: 2rem; margin-bottom: 0.2rem;" class="text-gradient">50ms</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Avg Response</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Why Choose <span class="text-gradient">SmartApp</span>?</h2>
+            <p class="section-subtitle fade-in">Enterprise-grade technology stack, built for developers who ship fast.
+            </p>
+
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <h3 style="font-size: 2rem; margin-bottom: 1.2rem;">Built with the <span class="text-gradient">Best
+                            Stack</span></h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.05rem;">
+                        SmartApp leverages a powerful <strong style="color: var(--primary);">Python</strong> backend for
+                        blazing-fast server-side processing, paired with
+                        <strong style="color: var(--secondary);">MySQL</strong> for enterprise-level data management.
+                    </p>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.05rem;">
+                        Deploy confidently on Netlify with our optimized frontend architecture. This is a developer
+                        assessment project that showcases real-world best practices.
+                    </p>
+                    <ul style="list-style: none; margin-bottom: 2rem;">
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;">
+                            <span
+                                style="width: 28px; height: 28px; background: rgba(16,185,129,0.15); border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; color: var(--primary); font-size: 0.8rem;"><i
+                                    class="fas fa-check"></i></span>
+                            End-to-end encrypted authentication
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;">
+                            <span
+                                style="width: 28px; height: 28px; background: rgba(16,185,129,0.15); border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; color: var(--primary); font-size: 0.8rem;"><i
+                                    class="fas fa-check"></i></span>
+                            Auto-scaling database connections
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;">
+                            <span
+                                style="width: 28px; height: 28px; background: rgba(16,185,129,0.15); border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; color: var(--primary); font-size: 0.8rem;"><i
+                                    class="fas fa-check"></i></span>
+                            Pixel-perfect responsive UI
+                        </li>
+                    </ul>
+                    <a href="#features" class="btn btn-outline"><i class="fas fa-arrow-right"></i> Explore Features</a>
+                </div>
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800"
+                        alt="Code on Screen" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section" style="background: var(--bg-surface);">
+        <div class="container">
+            <h2 class="section-title fade-in">Core <span class="text-gradient">Features</span></h2>
+            <p class="section-subtitle fade-in">Everything you need to build, ship, and scale your application.</p>
+
+            <div class="features-grid">
+                <div class="feature-card glass fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Authentication</h3>
+                    <p>Military-grade encryption for user sessions with OAuth2 and JWT token support.</p>
+                </div>
+                <div class="feature-card glass fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>MySQL Integration</h3>
+                    <p>Direct connection to robust MySQL clusters for rapid querying and structured data.</p>
+                </div>
+                <div class="feature-card glass fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Optimized rendering pipeline ensuring sub-50ms load times across all devices.</p>
+                </div>
+                <div class="feature-card glass fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Real-time insights with visual charts, logs, and system health monitoring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Get In <span class="text-gradient">Touch</span></h2>
+            <p class="section-subtitle fade-in">Questions about deployment? We'd love to hear from you.</p>
+
+            <div class="contact-card glass fade-in">
+                <form action="#" method="POST">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 1.5rem;">
+                        <label class="form-label">Your Message</label>
+                        <textarea class="form-control" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="grid-column: span 2;">
+                    <a href="#" class="logo" style="display: inline-block; margin-bottom: 1rem;">
+                        <i class="fab fa-python"></i>Smart<span class="text-gradient">App</span>
+                    </a>
+                    <p style="color: var(--text-muted); max-width: 300px;">A professional web application featuring
+                        a modern UI, Python backend, and MySQL database integration. Ready for Netlify deployment.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"
+                                    style="font-size: 0.7rem; margin-right: 0.5rem;"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"
+                                    style="font-size: 0.7rem; margin-right: 0.5rem;"></i> About</a></li>
+                        <li><a href="#features"><i class="fas fa-chevron-right"
+                                    style="font-size: 0.7rem; margin-right: 0.5rem;"></i> Features</a></li>
+                        <li><a href="login.html"><i class="fas fa-chevron-right"
+                                    style="font-size: 0.7rem; margin-right: 0.5rem;"></i> Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SmartApp — Python + MySQL Assessment Project. Deployed on Netlify.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | SmartApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+
+<body>
+
+    <div class="auth-page">
+        <div class="hero-bg"
+            style="top: -15%; left: -10%; background: var(--primary); opacity: 0.1; width: 500px; height: 500px;"></div>
+        <div class="hero-bg"
+            style="bottom: -15%; right: -10%; background: var(--secondary); opacity: 0.08; width: 400px; height: 400px;">
+        </div>
+
+        <div class="container" style="display: flex; justify-content: center;">
+            <div class="auth-card glass fade-in">
+
+                <div class="form-header">
+                    <a href="index.html" class="logo"
+                        style="font-size: 2rem; margin-bottom: 0.5rem; display: inline-block;">
+                        <i class="fab fa-python"></i>Smart<span class="text-gradient">App</span>
+                    </a>
+                    <h2 style="font-size: 1.5rem; margin-top: 0.5rem;">Create Your Account</h2>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Join our Python + MySQL platform today</p>
+                </div>
+
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label class="form-label"><i class="fas fa-user"
+                                style="margin-right: 6px; color: var(--primary);"></i> Full Name</label>
+                        <input type="text" class="form-control" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label"><i class="fas fa-envelope"
+                                style="margin-right: 6px; color: var(--secondary);"></i> Email Address</label>
+                        <input type="email" class="form-control" placeholder="developer@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label"><i class="fas fa-lock"
+                                style="margin-right: 6px; color: var(--accent);"></i> Password</label>
+                        <input type="password" class="form-control" placeholder="Create a strong password" required>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 2rem;">
+                        <label class="form-label"><i class="fas fa-lock"
+                                style="margin-right: 6px; color: var(--accent);"></i> Confirm Password</label>
+                        <input type="password" class="form-control" placeholder="Confirm your password" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-user-plus"></i> Create Account
+                    </button>
+                </form>
+
+                <div class="form-footer">
+                    <p>Already have an account? <a href="login.html">Sign In Here</a></p>
+                    <p style="margin-top: 1rem;"><a href="index.html"
+                            style="color: var(--text-muted); font-size: 0.9rem;"><i class="fas fa-arrow-left"></i> Back
+                            to Home</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

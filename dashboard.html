@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | SmartApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+
+<body>
+
+    <div class="dashboard-layout fade-in">
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <a href="index.html" class="logo">
+                    <i class="fab fa-python"></i>Smart<span class="text-gradient">App</span>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="active" data-target="overview"><i class="fas fa-home"></i> Overview</a>
+                <a href="#" data-target="profile"><i class="fas fa-user-circle"></i> Profile</a>
+                <a href="#" data-target="database"><i class="fas fa-database"></i> Database</a>
+                <a href="#" data-target="analytics"><i class="fas fa-chart-bar"></i> Analytics</a>
+                <a href="#" data-target="configuration"><i class="fas fa-cog"></i> Settings</a>
+            </nav>
+
+            <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border);">
+                <a href="index.html" class="btn btn-outline btn-block" style="font-size: 0.9rem;">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- Topbar -->
+            <header class="topbar">
+                <div
+                    style="display: flex; align-items: center; background: rgba(255,255,255,0.04); padding: 0.5rem 1rem; border-radius: 12px; width: 300px; border: 1px solid var(--border);">
+                    <i class="fas fa-search" style="color: var(--text-muted); margin-right: 0.5rem;"></i>
+                    <form class="search-form" style="width: 100%;">
+                        <input type="text" placeholder="Search scripts, queries..."
+                            style="border: none; background: transparent; width: 100%; outline: none; font-family: inherit; color: var(--text-main);">
+                    </form>
+                </div>
+
+                <div class="user-profile">
+                    <div style="text-align: right;">
+                        <p style="font-weight: 600; font-size: 0.9rem; line-height: 1; color: var(--text-main);">
+                            Developer</p>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Admin</span>
+                    </div>
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+
+                <!-- OVERVIEW SECTION -->
+                <div id="overview" class="content-section active">
+                    <h2 style="margin-bottom: 2rem; font-size: 1.8rem;"><i class="fas fa-home text-gradient"
+                            style="margin-right: 12px;"></i> System Overview</h2>
+
+                    <div class="dashboard-cards" style="margin-bottom: 2.5rem;">
+                        <div class="dash-card glass">
+                            <div class="dash-icon bg-green"><i class="fas fa-users"></i></div>
+                            <div class="dash-info">
+                                <h4>Active Users</h4>
+                                <h2>1,452</h2>
+                            </div>
+                        </div>
+                        <div class="dash-card glass">
+                            <div class="dash-icon bg-purple"><i class="fas fa-database"></i></div>
+                            <div class="dash-info">
+                                <h4>SQL Queries/hr</h4>
+                                <h2>8.2K</h2>
+                            </div>
+                        </div>
+                        <div class="dash-card glass">
+                            <div class="dash-icon bg-pink"><i class="fas fa-server"></i></div>
+                            <div class="dash-info">
+                                <h4>Backend Status</h4>
+                                <h2>99.9%</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity Table -->
+                    <div class="glass" style="padding: 2rem;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                            <h3 style="font-size: 1.15rem;">Recent Activity</h3>
+                            <button class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.85rem;"><i
+                                    class="fas fa-sync-alt"></i> Refresh</button>
+                        </div>
+                        <div style="overflow-x: auto;">
+                            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                                <thead>
+                                    <tr
+                                        style="border-bottom: 1px solid var(--border); color: var(--text-muted); font-size: 0.85rem;">
+                                        <th style="padding: 0.8rem 0;">ID</th>
+                                        <th style="padding: 0.8rem 0;">Email</th>
+                                        <th style="padding: 0.8rem 0;">Action</th>
+                                        <th style="padding: 0.8rem 0;">Status</th>
+                                        <th style="padding: 0.8rem 0;">Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="font-size: 0.95rem;">
+                                    <tr style="border-bottom: 1px solid var(--border);">
+                                        <td style="padding: 0.8rem 0; color: var(--text-muted);">#8821</td>
+                                        <td style="padding: 0.8rem 0;">dev@example.com</td>
+                                        <td style="padding: 0.8rem 0;">INSERT</td>
+                                        <td style="padding: 0.8rem 0;"><span
+                                                style="background: rgba(16,185,129,0.15); color: #34d399; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600;">SUCCESS</span>
+                                        </td>
+                                        <td style="padding: 0.8rem 0; color: var(--text-muted);">Just now</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid var(--border);">
+                                        <td style="padding: 0.8rem 0; color: var(--text-muted);">#8820</td>
+                                        <td style="padding: 0.8rem 0;">admin@app.com</td>
+                                        <td style="padding: 0.8rem 0;">UPDATE</td>
+                                        <td style="padding: 0.8rem 0;"><span
+                                                style="background: rgba(16,185,129,0.15); color: #34d399; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600;">SUCCESS</span>
+                                        </td>
+                                        <td style="padding: 0.8rem 0; color: var(--text-muted);">5m ago</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid var(--border);">
+                                        <td style="padding: 0.8rem 0; color: var(--text-muted);">#8819</td>
+                                        <td style="padding: 0.8rem 0;">system@cron.io</td>
+                                        <td style="padding: 0.8rem 0;">DELETE</td>
+                                        <td style="padding: 0.8rem 0;"><span
+                                                style="background: rgba(245,158,11,0.15); color: #fbbf24; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600;">PENDING</span>
+                                        </td>
+                                        <td style="padding: 0.8rem 0; color: var(--text-muted);">15m ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0.8rem 0; color: var(--text-muted);">#8818</td>
+                                        <td style="padding: 0.8rem 0;">guest@test.com</td>
+                                        <td style="padding: 0.8rem 0;">SELECT</td>
+                                        <td style="padding: 0.8rem 0;"><span
+                                                style="background: rgba(239,68,68,0.15); color: #f87171; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600;">FAILED</span>
+                                        </td>
+                                        <td style="padding: 0.8rem 0; color: var(--text-muted);">1h ago</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROFILE SECTION -->
+                <div id="profile" class="content-section" style="display: none;">
+                    <h2 style="margin-bottom: 2rem; font-size: 1.8rem;"><i class="fas fa-user-circle text-gradient"
+                            style="margin-right: 12px;"></i> Profile Settings</h2>
+                    <div class="glass" style="padding: 2.5rem; max-width: 750px;">
+                        <div
+                            style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem;">
+                            <div
+                                style="width: 90px; height: 90px; border-radius: 16px; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 1.4rem; margin-bottom: 0.3rem;">Developer Account</h3>
+                                <p style="color: var(--text-muted);">Python/MySQL Admin</p>
+                            </div>
+                        </div>
+                        <form action="#" method="POST">
+                            <div
+                                style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control" value="John" required>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" value="Developer" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" value="developer@example.com" disabled
+                                    style="opacity: 0.5; cursor: not-allowed;">
+                            </div>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save
+                                Changes</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- DATABASE SECTION -->
+                <div id="database" class="content-section" style="display: none;">
+                    <h2 style="margin-bottom: 2rem; font-size: 1.8rem;"><i class="fas fa-database text-gradient"
+                            style="margin-right: 12px;"></i> Query Runner</h2>
+                    <div class="glass" style="padding: 2.5rem; margin-bottom: 2rem;">
+                        <div style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                            <span style="font-weight: 600;"><i class="fas fa-terminal"
+                                    style="color: var(--primary); margin-right: 0.5rem;"></i> SQL Terminal</span>
+                            <span style="color: var(--primary); font-size: 0.9rem;"><i class="fas fa-circle"
+                                    style="font-size: 0.5rem; margin-right: 0.3rem;"></i> Connected</span>
+                        </div>
+                        <form action="#" method="POST">
+                            <textarea class="form-control"
+                                style="font-family: 'Fira Code', monospace; min-height: 100px; margin-bottom: 1rem;"
+                                placeholder="SELECT * FROM users LIMIT 10;"></textarea>
+                            <div style="display: flex; gap: 1rem;">
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-play"></i>
+                                    Execute</button>
+                                <button type="button" class="btn btn-outline"><i class="fas fa-eraser"></i>
+                                    Clear</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div
+                        style="border: 2px dashed var(--border); border-radius: var(--radius); padding: 3rem 2rem; text-align: center; color: var(--text-muted);">
+                        <i class="fas fa-table" style="font-size: 2.5rem; margin-bottom: 0.8rem; opacity: 0.4;"></i>
+                        <h3 style="color: var(--text-muted);">No results yet</h3>
+                        <p>Execute a SQL query above to see output here.</p>
+                    </div>
+                </div>
+
+                <!-- ANALYTICS SECTION -->
+                <div id="analytics" class="content-section" style="display: none;">
+                    <h2 style="margin-bottom: 2rem; font-size: 1.8rem;"><i class="fas fa-chart-line text-gradient"
+                            style="margin-right: 12px;"></i> Analytics</h2>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="glass" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem;">Weekly Requests</h3>
+                            <div
+                                style="height: 220px; display: flex; align-items: flex-end; gap: 0.8rem; border-bottom: 1px solid var(--border); border-left: 1px solid var(--border); padding: 0.8rem 0.8rem 0; margin-bottom: 0.8rem;">
+                                <div
+                                    style="flex: 1; background: var(--gradient); height: 40%; border-radius: 4px 4px 0 0; opacity: 0.8;">
+                                </div>
+                                <div
+                                    style="flex: 1; background: var(--gradient); height: 55%; border-radius: 4px 4px 0 0; opacity: 0.85;">
+                                </div>
+                                <div
+                                    style="flex: 1; background: var(--gradient); height: 75%; border-radius: 4px 4px 0 0; opacity: 0.9;">
+                                </div>
+                                <div
+                                    style="flex: 1; background: var(--gradient); height: 60%; border-radius: 4px 4px 0 0; opacity: 0.85;">
+                                </div>
+                                <div
+                                    style="flex: 1; background: var(--gradient); height: 90%; border-radius: 4px 4px 0 0;">
+                                </div>
+                                <div
+                                    style="flex: 1; background: var(--gradient); height: 30%; border-radius: 4px 4px 0 0; opacity: 0.7;">
+                                </div>
+                                <div
+                                    style="flex: 1; background: var(--gradient); height: 45%; border-radius: 4px 4px 0 0; opacity: 0.8;">
+                                </div>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.75rem;">
+                                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                            </div>
+                        </div>
+                        <div class="glass" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem;">Resources</h3>
+                            <div style="margin-bottom: 1.5rem;">
+                                <div
+                                    style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.9rem;">
+                                    <span>CPU</span><span>45%</span></div>
+                                <div
+                                    style="width: 100%; height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden;">
+                                    <div
+                                        style="width: 45%; height: 100%; background: var(--primary); border-radius: 3px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 1.5rem;">
+                                <div
+                                    style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.9rem;">
+                                    <span>RAM</span><span>72%</span></div>
+                                <div
+                                    style="width: 100%; height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden;">
+                                    <div
+                                        style="width: 72%; height: 100%; background: var(--secondary); border-radius: 3px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.9rem;">
+                                    <span>Disk</span><span style="color: #f87171;">88% <i
+                                            class="fas fa-exclamation-triangle"></i></span></div>
+                                <div
+                                    style="width: 100%; height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden;">
+                                    <div style="width: 88%; height: 100%; background: #ef4444; border-radius: 3px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONFIGURATION SECTION -->
+                <div id="configuration" class="content-section" style="display: none;">
+                    <h2 style="margin-bottom: 2rem; font-size: 1.8rem;"><i class="fas fa-cog text-gradient"
+                            style="margin-right: 12px;"></i> Settings</h2>
+                    <div class="glass" style="padding: 2.5rem; max-width: 750px;">
+                        <h3
+                            style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; font-size: 1.1rem;">
+                            <i class="fab fa-python" style="color: var(--primary); margin-right: 0.5rem;"></i> Backend
+                            Config</h3>
+                        <form action="#" method="POST" style="margin-bottom: 2.5rem;">
+                            <div class="form-group">
+                                <label class="form-label">Flask Secret Key</label>
+                                <input type="password" class="form-control" value="super_secret_key" required>
+                            </div>
+                            <div class="form-group" style="display: flex; align-items: center; gap: 0.8rem;">
+                                <input type="checkbox" id="debug_mode" checked
+                                    style="accent-color: var(--primary); width: 18px; height: 18px;">
+                                <label for="debug_mode"
+                                    style="margin: 0; font-weight: 500; color: var(--text-muted);">Enable
+                                    FLASK_DEBUG</label>
+                            </div>
+                        </form>
+                        <h3
+                            style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; font-size: 1.1rem;">
+                            <i class="fas fa-database" style="color: var(--secondary); margin-right: 0.5rem;"></i> MySQL
+                            Connection</h3>
+                        <form action="#" method="POST">
+                            <div
+                                style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label class="form-label">Host URL</label>
+                                    <input type="text" class="form-control" value="mysql-cluster.internal" required>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label class="form-label">Port</label>
+                                    <input type="text" class="form-control" value="3306" required>
+                                </div>
+                            </div>
+                            <div
+                                style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label class="form-label">Username</label>
+                                    <input type="text" class="form-control" value="admin_root" required>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" value="*********" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-server"></i> Save &
+                                Restart</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
